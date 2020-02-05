@@ -7,11 +7,15 @@
     justify-content: center;
     border: 1px solid black;
     margin: 0 7.5px 15px;
-  
+    background-size: cover;
+    background-position: center;
+    &.large{
+      height: 350px;
+    }
     &:first-child {
       margin-right: 7.5px;
     }
-  
+  s
     &:last-child {
       margin-left: 7.5px;
     }
