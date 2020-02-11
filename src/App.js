@@ -5,6 +5,7 @@ import './App.css'
 import HomePage from './pages/HomePage/HomePage';
 
 import ShopPage from './pages/Shop/ShopPage'
+import HeaderComponent from './components/header/header'
 
 
 // const HatsPage=()=>(
@@ -18,6 +19,7 @@ import ShopPage from './pages/Shop/ShopPage'
 function App() {
   return (
   <div>
+    <HeaderComponent/>
     <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route  path='/shop' component={ShopPage}/>
