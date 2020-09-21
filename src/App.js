@@ -18,12 +18,7 @@ const HatsPage = () => (
 );
 
 class App extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     currentUser: null
-  //   };
-  // }
+
   unsubcribeFormAuth = null;
   componentDidMount() {
     const { setCurrentUser}=this.props;
