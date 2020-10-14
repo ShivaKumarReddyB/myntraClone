@@ -1,9 +1,8 @@
 import React from "react";
 import FormInput from "../customInput/formInput.component";
 import CustomButton from "../customButton/customButtom.component";
- import './signUp.style.scss';
- import {auth, createUserProfileDocument} from '../../firebase/firebase.utli';
-
+import "./signUp.style.scss";
+import { auth, createUserProfileDocument } from "../../firebase/firebase.utli";
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -13,11 +12,11 @@ class SignUp extends React.Component {
       displayName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
     };
   }
- 
-  handleSubmit = async event => {
+
+  handleSubmit = async (event) => {
     event.preventDefault();
 
     const { displayName, email, password, confirmPassword } = this.state;
@@ -36,17 +35,17 @@ class SignUp extends React.Component {
       await createUserProfileDocument(user, { displayName });
 
       this.setState({
-        displayName: '',
-        email: '',
-        password: '',
-        confirmPassword: ''
+        displayName: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
       });
     } catch (error) {
       console.error(error);
     }
   };
 
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
   render() {
