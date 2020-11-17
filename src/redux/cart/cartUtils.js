@@ -1,0 +1,16 @@
+export const addItemToCart = (cartItems, cartItemToAdd) => {
+  const existingCartItem = cartItems.find(
+    (cartItems) => cartItems.id === cartItemToAdd.id
+  ); // will return  ture or false
+
+  if (existingCartItem) {
+    // if the item exits the quantity increase
+    return cartItems.map((cartItem) =>
+      cartItem.id === cartItemToAdd.id
+        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+        : cartItem
+    );
+  }
+
+  return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
+};
