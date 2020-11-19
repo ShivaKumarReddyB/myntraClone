@@ -14,7 +14,7 @@ const CustomButton = ({
     } custom-button`}
     {...otherProps}
   >
-    {children}
+    <span style={{ width: "auto" }}>{children}</span>
   </button>
 );
 export default CustomButton;
