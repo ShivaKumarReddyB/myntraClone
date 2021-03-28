@@ -11,7 +11,7 @@ import CheckoutItem from "../../components/checkoutItem/CheckoutItem";
 import {
   RemoveItem,
   DecreaseItem,
-  addItem,
+  addItem
 } from "../../redux/cart/cart.actions";
 
 const CheckoutPage = (props) => {
@@ -52,7 +52,7 @@ const CheckoutPage = (props) => {
 };
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,
-  total: selectCartTotal,
+  total: selectCartTotal
 });
 
 const mapDispatchToProps = {
